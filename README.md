@@ -5,3 +5,10 @@
 此书籍遵循 Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 
 
 即 **署名-非商业用途-禁止演绎**
+
+## Build
+
+```bash
+$ npm run serve 
+$ npm run publish
+```
