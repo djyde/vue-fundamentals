@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>MVVM 初探 | Building Large Application with Vue.js</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../chapters/intro/vue.html" />
+    
+    
+    <link rel="prev" href="../../chapters/intro/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.1"
+        data-chapter-title="MVVM 初探"
+        data-filepath="chapters/intro/mvvm.md"
+        data-basepath="../.."
+        data-revision="Fri Mar 25 2016 15:59:06 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapters/preface/index.html">
+            
+                
+                    <a href="../../chapters/preface/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        前言
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapters/intro/index.html">
+            
+                
+                    <a href="../../chapters/intro/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        介绍
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1" data-path="chapters/intro/mvvm.html">
+            
+                
+                    <a href="../../chapters/intro/mvvm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        MVVM 初探
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapters/intro/vue.html">
+            
+                
+                    <a href="../../chapters/intro/vue.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Vue.js
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapters/building/index.html">
+            
+            <span><b>3.</b> 构建中大型应用</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" >
+            
+            <span><b>3.1.</b> 组件化</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+            <span><b>3.2.</b> 构建工具</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+            <span><b>3.3.</b> 路由</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+            <span><b>3.4.</b> 状态管理</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> 应用实践</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" >
+            
+            <span><b>4.1.</b> Hackernews</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Building Large Application with Vue.js</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="mvvm-&#x521D;&#x63A2;">MVVM &#x521D;&#x63A2;</h1>
+<p>MVVM &#x662F; Model-View-ViewModel &#x7684;&#x7B80;&#x79F0;&#xFF0C;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;ViewModel &#x5B9E;&#x9645;&#x4E0A;&#x628A; View &#x548C; Model &#x8054;&#x7CFB;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5F53; Model &#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x901A;&#x8FC7;&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF0C;&#x628A;&#x53D8;&#x5316;&#x53CD;&#x6620;&#x5230; View &#x4E2D;&#x3002;</p>
+<p>ViewModel &#x6781;&#x5927;&#x5730;&#x63D0;&#x9AD8;&#x4E86;&#x5F00;&#x53D1;&#x7684;&#x6548;&#x7387;&#xFF0C;&#x56E0;&#x4E3A;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x8FDC;&#x8FDC;&#x5730;&#x964D;&#x4F4E;&#x4E86;&#x5F00;&#x53D1;&#x8005;&#x624B;&#x52A8;&#x7BA1;&#x7406; DOM State &#x7684;&#x5FC5;&#x8981;&#x6027;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x4E3E;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;foo.png&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;pic&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;hide()&quot;</span>&gt;</span>click me<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">var</span> hide = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;#pic&apos;</span>).style.display = <span class="hljs-string">&apos;none&apos;</span>; <span class="hljs-comment">// &#x6838;&#x5FC3;&#x64CD;&#x4F5C;</span>
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x662F;&#x7528;&#x539F;&#x751F; JavaScript DOM &#x64CD;&#x4F5C;&#x5B9E;&#x73B0;&#x7684;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x9690;&#x85CF;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#xFF0C;&#x4E0B;&#x9762;&#x662F; Vue.js &#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;app&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;foo.png&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;pic&quot;</span><span class="hljs-value">,</span> <span class="hljs-attribute">v-show</span>=<span class="hljs-value">&quot;isShow&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> @<span class="hljs-attribute">click</span>=<span class="hljs-value">&quot;hide&quot;</span>&gt;</span>click me<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+  <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&apos;#app&apos;</span>,
+    data: {
+      isShow: <span class="hljs-literal">true</span>
+    },
+    methods: {
+      hide: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">this</span>.isShow = <span class="hljs-literal">false</span>; <span class="hljs-comment">// &#x6838;&#x5FC3;&#x64CD;&#x4F5C;</span>
+      }
+    }
+  })
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x770B;&#x4E0A;&#x53BB;&#xFF0C;&#x597D;&#x50CF;&#x7528;&#x539F;&#x751F; DOM &#x5B9E;&#x73B0;&#x7684;&#x4EE3;&#x7801;&#x91CF;&#x8981;&#x6BD4;&#x7528;&#x6846;&#x67B6;&#x5C11;&#x5F97;&#x591A;&#xFF0C;&#x5F53;&#x7136;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x6574;&#x4E00;&#x4E2A;&#x7F51;&#x7AD9;&#x53EA;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x51E0;&#x4E2A;&#x50CF;&#x8FD9;&#x6837;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x624B;&#x5199; DOM &#x4E5F;&#x672A;&#x5C1D;&#x4E0D;&#x53EF;&#xFF0C;&#x4F7F;&#x7528;&#x6846;&#x67B6;&#x6216;&#x5E93;&#x53CD;&#x800C;&#x5C31;&#x6210;&#x4E86;&#x753B;&#x86C7;&#x6DFB;&#x8DB3;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x5927;&#x591A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x5F00;&#x53D1;&#x7A0D;&#x5FAE;&#x590D;&#x6742;&#x4E00;&#x70B9;&#x7684;&#x7F51;&#x7AD9;&#x65F6;&#xFF0C;DOM &#x64CD;&#x4F5C;&#x5C31;&#x8FDC;&#x8FDC;&#x4E0D;&#x6B62;&#x8FD9;&#x6837;&#x4E86;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x5B9E;&#x73B0;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#xFF0C;&#x5E76;&#x975E;&#x4F53;&#x73B0;&#x5728;&#x4EE3;&#x7801;&#x91CF;&#x4E0A;&#xFF0C;&#x800C;&#x662F;&#x6574;&#x4E2A;&#x5F00;&#x53D1;&#x601D;&#x7EF4;&#x7684;&#x53D8;&#x5316;&#x3002;&#x5BF9;&#x6BD4;&#x4E24;&#x4E2A;&#x5B9E;&#x73B0;&#x7684;&#x6838;&#x5FC3;&#x64CD;&#x4F5C;&#xFF0C;&#x524D;&#x8005;&#x7684;&#x601D;&#x8DEF;&#x662F;&#x62FF;&#x5230; DOM&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x9700;&#x6C42;&#xFF08;&#x8FD9;&#x91CC;&#x7684;&#x56FE;&#x7247;&#x7684;&#x9690;&#x85CF;&#xFF09;&#x518D;&#x53BB;&#x64CD;&#x4F5C;&#x3001;&#x4FEE;&#x6539; DOM&#x3002;&#x800C;&#x540E;&#x8005;&#x5219;&#x662F;&#x901A;&#x8FC7; v-show &#x6307;&#x4EE4; (directive) &#x7ED1;&#x5B9A;&#x6570;&#x636E; isShow&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EA;&#x9700;&#x8981;<strong>&#x51B3;&#x5B9A;&#x5143;&#x7D20;&#x662F;&#x5426;&#x663E;&#x793A;</strong>&#xFF0C;DOM &#x64CD;&#x4F5C;&#x4EA4;&#x7ED9; Vue.js&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../chapters/intro/index.html" class="navigation navigation-prev " aria-label="Previous page: 介绍"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../chapters/intro/vue.html" class="navigation navigation-next " aria-label="Next page: Vue.js"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

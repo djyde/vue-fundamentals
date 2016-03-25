@@ -1,0 +1,20 @@
+{
+  "name": "vue-fundamentals",
+  "version": "1.0.0",
+  "description": "Building large application with Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gitbook serve",
+    "publish": "bash ./publish.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djyde/vue-fundamentals.git"
+  },
+  "author": "Randy Lu <randypriv@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djyde/vue-fundamentals/issues"
+  },
+  "homepage": "https://github.com/djyde/vue-fundamentals#readme"
+}
